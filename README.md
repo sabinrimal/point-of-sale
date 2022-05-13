@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![preview img](/preview1.png)
-![preview img](/preview2.png)
+![preview img](/preview1.PNG)
+![preview img](/preview2.PNG)
 
 ## Run Locally
 
