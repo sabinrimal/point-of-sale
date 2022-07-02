@@ -1,8 +1,8 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/') }}">
-                <div class="sidebar-brand-text mx-3">{{ __('Homepage') }}</div>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/admin/dashboard') }}">
+                <div class="sidebar-brand-text mx-3">{{ __('DreamPOS') }}</div>
             </a>
 
             <!-- Divider -->
@@ -54,7 +54,7 @@
                     <i class="fas fa-fw fa-cogs"></i>
                     <span>{{ __('Transaction') }}</span></a>
             </li>
-            
+
             <li class="nav-item {{ request()->is('admin/reports/revenue') || request()->is('admin/reports/revenue') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.reports.revenue') }}">
                     <i class="fas fa-fw fa-cogs"></i>

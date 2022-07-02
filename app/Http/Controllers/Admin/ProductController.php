@@ -14,7 +14,7 @@ use Illuminate\Http\RedirectResponse;
 class ProductController extends Controller
 {
     use MediaUploading;
-   
+
     public function index(): View
     {
         $products = Product::all();
@@ -93,7 +93,7 @@ class ProductController extends Controller
 
     public function search(Request $request){
         $products = Product::where('name', 'like', '%' . $request->search . '%')->get();
-        
+
         return json_encode($products);
     }
 }

@@ -78,7 +78,7 @@
         <div>
             <center>
                     <u>
-                        <h1 style="font-weight: bolder; font-family: 'Forte'; color: #0a53be">POS Login</h1>
+                        <h1 style="font-weight: bolder; font-family: 'Forte'; color: #0a53be">DreamPOS Login</h1>
                     </u>
             </center>
         </div>

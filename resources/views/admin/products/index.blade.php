@@ -58,6 +58,7 @@
                                 <td>{{ $product->quantity }}</td>
                                 <td>
                                     @if($product->image)
+{{--                                        <a href="{{ $product->image->getUrl() }}" target="_blank">--}}
                                         <a href="{{ $product->image->getUrl() }}" target="_blank">
                                             <img src="{{ $product->image->getUrl() }}" width="45px" height="45px" />
                                         </a>
