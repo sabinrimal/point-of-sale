@@ -90,7 +90,8 @@
                         <img src="{{ $product->image->getUrl() }}" width="45px" height="45px" alt="test" />
                         @endif
                         <h6 style="margin: 0;">{{ $product->name }}</h6>
-                        <span >(रू{{ $product->price }})</span>
+                        <span >(रू{{ $product->price }})</span><br>
+                        <span >(Quantity:{{ $product->quantity }})</span>
                     </button>
                 @endforeach
             </div>

@@ -24,13 +24,13 @@
             text-align: center;
         }
         .text-right {
-            text-align: right;
+            text-align: center;
         }
 
         @media print {
             @page {
                 margin: 0;
-                size: 75mm
+                size: 50mm
     ';
     ?>
     <?php
@@ -57,7 +57,7 @@
 <body onload="window.print()">
     <button class="btn-print" style="position: absolute; right: 1rem; top: rem;" onclick="window.print()">Print</button>
     <div class="text-center">
-        <h3 style="margin-bottom: 5px;">SABIN RIMAL</h3>
+        <h3 style="margin-bottom: 5px;">DreamPOS</h3>
     </div>
     <br>
     <div>
@@ -99,7 +99,7 @@
     </table>
 
     <p class="text-center">===================================</p>
-    <p class="text-center">---SR---</p>
+    <p class="text-center">---DreamPOS---</p>
 
     <script>
         let body = document.body;

@@ -61,5 +61,4 @@
                     <span>{{ __('Revenue') }}</span></a>
             </li>
 
-
         </ul>
