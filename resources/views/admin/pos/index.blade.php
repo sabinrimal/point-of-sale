@@ -3,7 +3,7 @@
 @section('content')
 
 <div style="margin-left:20px;">
-    <div><u><h5>Products Selling Fast</h1></u><div>
+    <div><u><h5>Recent Sales</h1></u><div>
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($productsItems as $itemproduct)
                     <button type="button"
@@ -15,7 +15,8 @@
                         <img src="{{ $itemproduct->image->getUrl() }}" width="45px" height="45px" alt="test" />
                         @endif
                         <h6 style="margin: 0;">{{ $itemproduct->name }}</h6>
-                        <span >(Quantity:{{ $itemproduct->quantity }})</span>
+                        <span >(Quantity:{{ $itemproduct->quantity }})</span><br>
+                        <span >({{ $itemproduct->updated_at }})</span>
                     </button>
                 @endforeach
             </div>

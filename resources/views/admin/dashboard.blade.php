@@ -48,5 +48,22 @@
         </div>
     </div>
 
+    <hr style="border: double;"/>
+    <div style="margin-left:20px;">
+        <div><u><h5>Stocks needed to be updated</h1></u><div>
+            <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
+                @foreach($product as $itemproduct)
+                    <button type="button"
+                        class="item"
+                        style="cursor: pointer; border: none;"
+                        value="{{ $itemproduct->id }}"
+                    >
+                        <h6 style="margin: 0;">{{ $itemproduct->name }}</h6>
+                        <span >(Quantity:{{ $itemproduct->quantity }})</span>
+                    </button>
+                @endforeach
+            </div>        
+    </div>
+
 </div>
 @endsection
