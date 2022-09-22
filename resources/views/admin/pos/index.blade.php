@@ -1,6 +1,30 @@
 @extends('layouts.admin')
 
 @section('content')
+
+<div style="margin-left:20px;">
+    <div><u><h5>Products Selling Fast</h1></u><div>
+            <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
+                @foreach($productsItems as $itemproduct)
+                    <button type="button"
+                        class="item"
+                        style="cursor: pointer; border: none;"
+                        value="{{ $itemproduct->id }}"
+                    >
+                        @if($itemproduct->image)
+                        <img src="{{ $itemproduct->image->getUrl() }}" width="45px" height="45px" alt="test" />
+                        @endif
+                        <h6 style="margin: 0;">{{ $itemproduct->name }}</h6>
+                        <span >(Quantity:{{ $itemproduct->quantity }})</span>
+                    </button>
+                @endforeach
+            </div>
+            
+</div>
+<hr style="border: double;"/>
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-4">
@@ -79,6 +103,7 @@
                     placeholder="Search Product..."
                 />
             </div>
+
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($products as $product)
                     <button type="button"
@@ -91,7 +116,6 @@
                         @endif
                         <h6 style="margin: 0;">{{ $product->name }}</h6>
                         <span >(रू{{ $product->price }})</span><br>
-                        <span >(Quantity:{{ $product->quantity }})</span>
                     </button>
                 @endforeach
             </div>
