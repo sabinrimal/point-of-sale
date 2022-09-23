@@ -98,13 +98,23 @@
         </div>
         <div class="col-md-6 col-lg-8">
             <div class="mb-2">
-                <input
+                <!-- <h4><u>All Products</u></h4> -->
+                <!-- <input
                     type="text"
                     class="form-control search"
                     placeholder="Search Product..."
-                />
+                /> -->
+                <div class="col">
+                    <form class="d-flex">
+                        <input
+                            type="text"
+                            class="form-control search"
+                            placeholder="Search Product..."
+                        />
+                        <button class="btn btn-sm rounded btn-success scan">Find</button>
+                    </form>
             </div>
-
+            </div>
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($products as $product)
                     <button type="button"

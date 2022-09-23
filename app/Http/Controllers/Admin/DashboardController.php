@@ -14,9 +14,8 @@ class DashboardController extends Controller
     public function index(Request $request){
 
         //bubblesort
-        
         // dd($product);
-        $quantityitem = Product::get(['quantity']);
+        $quantityitem = Product::get(['quantity','name', 'code']);
 
         function bubbleSort($quantityitem)
         {
@@ -32,13 +31,18 @@ class DashboardController extends Controller
             }
             return $quantityitem;
         }
-
-        $product = Product::orderBy('quantity', 'asc')->get();
         $sorting = bubbleSort($quantityitem);
-        // dd($product);
+        // dd($sorting);   
         $users = User::all()->count();
         $transactions = Transaction::all()->count();
 
-        return view('admin.dashboard', compact('users','transactions', 'sorting', 'product'));
+        return view('admin.dashboard', compact('users','transactions', 'sorting'));
     }
 }
+
+
+
+
+
+
+        // $product = Product::orderBy('quantity', 'asc')->get();

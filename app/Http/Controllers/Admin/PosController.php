@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class PosController extends Controller
 {
@@ -15,5 +17,11 @@ class PosController extends Controller
         // $products = Product::orderBy('quantity', 'asc')->get();
 
         return view('admin.pos.index', compact('products','productsItems'));
+        
     }
+}
+
+class Post extends Model
+{
+    use Searchable;
 }
