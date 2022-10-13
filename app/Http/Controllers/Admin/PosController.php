@@ -6,7 +6,7 @@ use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+
 
 class PosController extends Controller
 {
@@ -14,14 +14,8 @@ class PosController extends Controller
 
         $productsItems = Product::orderBy('updated_at', 'desc')->paginate(5);
         $products = Product::all();
-        // $products = Product::orderBy('quantity', 'asc')->get();
 
         return view('admin.pos.index', compact('products','productsItems'));
         
     }
-}
-
-class Post extends Model
-{
-    use Searchable;
 }

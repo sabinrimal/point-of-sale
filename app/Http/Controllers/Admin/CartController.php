@@ -33,7 +33,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
         $request->productId ? $product = Product::findOrFail($request->productId) :
-        $product = Product::where('code', $request->productCode)->first();
+        $product = Product::where('name', $request->productCode)->first();
         if($product === null){
             return response()->json([
                 'status' => 500,

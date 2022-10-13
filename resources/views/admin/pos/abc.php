@@ -38,7 +38,7 @@
                                     </button>
                                 </td>
                                 <td class="text-right">
-                                $${product.quantity * product.price}
+                                रू${product.quantity * product.price}
                                 </td>
                             </tr>
                             `)

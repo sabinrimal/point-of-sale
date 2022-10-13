@@ -50,7 +50,7 @@
 
     <hr style="border: double;"/>
     <div style="margin-left:20px;">
-        <div><u><h5>Data sorted using BubbleSort Algorithm</h1></u><div>
+        <div><u><h5>Stocks Clearing Fast</h1></u><p>(Using BubbleSort)</p><div>
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($sorting as $itemproduct)
                     <button type="button"

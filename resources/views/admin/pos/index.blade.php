@@ -3,7 +3,7 @@
 @section('content')
 
 <div style="margin-left:20px;">
-    <div><u><h5>Recent Sales</h1></u><div>
+    <div><u><h5>Last Updated Products</h1></u><div>
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($productsItems as $itemproduct)
                     <button type="button"
@@ -23,7 +23,6 @@
             
 </div>
 <hr style="border: double;"/>
-
 
 
 <div class="container">
@@ -98,22 +97,16 @@
         </div>
         <div class="col-md-6 col-lg-8">
             <div class="mb-2">
-                <!-- <h4><u>All Products</u></h4> -->
-                <!-- <input
-                    type="text"
-                    class="form-control search"
-                    placeholder="Search Product..."
-                /> -->
                 <div class="col">
                     <form class="d-flex">
                         <input
                             type="text"
-                            class="form-control search"
+                            class="form-control productCode"
                             placeholder="Search Product..."
                         />
                         <button class="btn btn-sm rounded btn-success scan">Find</button>
                     </form>
-            </div>
+                </div>
             </div>
             <div class="order-product product-search" style="display: flex;column-gap: 0.5rem;flex-wrap: wrap;row-gap: .5rem;">
                 @foreach($products as $product)
@@ -175,7 +168,7 @@
                                     </button>
                                 </td>
                                 <td class="text-right">
-                                $${ product.quantity * product.price}
+                                रू${ product.quantity * product.price}
                                 </td>
                             </tr>
                             `)
